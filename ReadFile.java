@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ReadFile { //Sinh vien co the doc hieu nhung khong duoc sua file nay
+public class ReadFile {
 	private ArrayList<String> inputArray;
 	
 	public ReadFile(String fileName) throws FileNotFoundException{
