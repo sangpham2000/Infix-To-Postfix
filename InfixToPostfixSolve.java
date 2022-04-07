@@ -1,35 +1,32 @@
 import java.util.Stack;
 
-//Sinh vien khong chinh sua bat ky dong lenh nao ben tren dong comment "Phan bai lam cua sinh vien", duoc phep them thu vien khi can thiet
 
 public class InfixToPostfixSolve implements Requirement1_OutputGetter {
 	private String inputString;
 	private String outputString;
 	
-	public InfixToPostfixSolve(){ //Phuong thuc khong duoc chinh sua
+	public InfixToPostfixSolve(){ 
 		this.inputString = "";
 		this.outputString = "";
 	}
 	
-	public InfixToPostfixSolve(String inputString){ //Phuong thuc khong duoc chinh sua
+	public InfixToPostfixSolve(String inputString){
 		this.inputString = inputString;
 		this.outputString = "";
 	}
 		
-	public void setInputString(String inputString){ //Phuong thuc khong duoc chinh sua
+	public void setInputString(String inputString){
 		this.inputString = inputString;
 	}
 	
-	 public String getOutputString() { //Phuong thuc khong duoc chinh sua
+	 public String getOutputString() {
     	this.outputString = infixToPostfix();
 		return outputString;
 	}	
 	
-	// Phan bai lam cua sinh vien
 	
 	private String infixToPostfix(){
 		String postfix = "";
-        // code here
 		String[] str = stringTokenizer(inputString);
 		Stack<String> stack = new Stack<String>();
 		for (int i = 0; i < str.length; i++)
@@ -61,7 +58,6 @@ public class InfixToPostfixSolve implements Requirement1_OutputGetter {
 	}
 	
 	private String[] stringTokenizer(String str){
-        // code here
 		String[] tokens = new String[str.length()];
 		int n = 0;
 		for(int i = 0; i < str.length(); i++)
@@ -83,7 +79,6 @@ public class InfixToPostfixSolve implements Requirement1_OutputGetter {
     }
 	
 	private int priorityOfOperator(String op){
-        // code here
 		if (op.equals("+") || op.equals("-"))
 			return 1;
 		if (op.equals("*") || op.equals("/"))
