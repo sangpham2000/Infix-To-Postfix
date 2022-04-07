@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Main { //Sinh vien co the doc hieu nhung khong duoc sua file nay
+public class Main {
 
 	public static void main(String[] args) throws IOException {
 		ArrayList<String> inputArray1 = new ArrayList<String>();
